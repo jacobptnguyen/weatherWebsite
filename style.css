@@ -1,0 +1,48 @@
+/* Made by: Jacob Nguyen
+Email: jacobptnguyen@gmail.com */
+/* api used: https://www.weather.gov/documentation/services-web-api */
+
+body{
+    background-color: gray;
+    margin: 50px;
+}
+
+p{
+    font-family: sans-serif;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    gap: 10px;
+}
+
+.mainBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 30px;
+    gap: 30px;
+    font-size: 36px;
+    font-family: sans-serif;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.title{
+    font-size: 80px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    gap: 30px;
+}
