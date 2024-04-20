@@ -3,7 +3,7 @@ Email: jacobptnguyen@gmail.com */
 /* api used: https://www.weather.gov/documentation/services-web-api */
 
 body{
-    background-color: gray;
+    background-color: #F8E2B1;
     margin: 50px;
 }
 
@@ -43,6 +43,71 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
     gap: 30px;
+}
+
+.leftButton{
+    background-color: #FFFDD0;
+    height: 100px;
+    width: 250px;
+    border-radius: 30px;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightButton{
+    background-color: #FFFDD0;
+    height: 100px;
+    width: 250px;
+    border-radius: 30px;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.leftDummyButton{
+    background-color: #FFFDD0;
+    height: 100px;
+    width: 250px;
+    border-radius: 30px;
+    border-color: transparent;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightDummyButton{
+    background-color: #FFFDD0;
+    height: 100px;
+    width: 250px;
+    border-radius: 30px;
+    border-color: transparent;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    background-color: #F8E2B1;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.submit{
+    background-color: #FFFDD0;
+    height: 50px;
+    width: 100px;
+    border-radius: 30px;
+    border-color: transparent;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
