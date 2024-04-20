@@ -14,7 +14,7 @@ function main(){
         currentCoords = fixInput(data); // store for later
         inputBox.value = "";
         currentIndex = 0;
-        console.log(currentCoords);
+        // console.log(currentCoords);
         getData(currentCoords, currentIndex);
     }); 
 }
@@ -22,10 +22,10 @@ function main(){
 // currentCoords.replaceAll(" ", "").replaceAll("(", "").replaceAll(")", "").replaceAll("°","").replaceAll("N","").replaceAll("W","")
 function fixInput(data){
     // 36.60869° N, 121.85634° W
-    coords = data.split(",");
-    if(coords[0][coords.len-1] == "S"){
+    // coords = data.split(",");
+    // if(coords[0][coords.len-1] == "S"){
         
-    }
+    // }
     return data.replaceAll(" ", "").replaceAll("(", "").replaceAll(")", "").replaceAll("°","");
 }
 
@@ -39,7 +39,7 @@ function clear(){
 
 function addLoadingScreen(){
     mainBody = document.querySelector('.mainBody');
-    mainBody.style.backgroundColor = "white";
+    mainBody.style.backgroundColor = "#FFFDD0";
     mainBody.textContent = "Loading...";
 }
 
@@ -51,8 +51,8 @@ function clearLoadingScreen(){
 
 function addErrorMessage(){
     mainBody = document.querySelector('.mainBody');
-    mainBody.style.backgroundColor = "white";
-    mainBody.textContent = "Something Went Wrong! Please Try Again!";
+    mainBody.style.backgroundColor = "#FFFDD0";
+    mainBody.textContent = "Something Went Wrong! Please Try Again!\nExample of valid coordinates: 39.7456,-97.0892";
 }
 
 function getData(coordinates, index){
@@ -75,19 +75,19 @@ function getData(coordinates, index){
         .catch(function(error){
             clearLoadingScreen();
             addErrorMessage();
-            console.log("invalid coordinates"); // make sure user sees error and tell them format
+            // console.log("invalid coordinates"); // make sure user sees error and tell them format
         });
 }
 
 function displayData(currentPeriod, index){
 
     mainBody = document.querySelector('.mainBody');
-    mainBody.style.backgroundColor = "white";
+    mainBody.style.backgroundColor = "#FFFDD0";
 
     title = document.createElement('div');
     title.className = 'title';
     if(index + 1> 13){
-        title.textContent = "Next" + currentPeriod.name;
+        title.textContent = "Next " + currentPeriod.name;
     }else{
         title.textContent = currentPeriod.name;
     }
@@ -167,7 +167,8 @@ function makeButton(direction, buttons){
         rightButton.className = "rightButton";
         rightButton.addEventListener('click', function rightButtonFunc(e){
             currentIndex += 1;
-            getData(currentCoords.replaceAll(" ", "").replaceAll("(", "").replaceAll(")", "").replaceAll("°","").replaceAll("N","").replaceAll("W",""), currentIndex);
+            currentCoords = fixInput(currentCoords);
+            getData(currentCoords, currentIndex);
         }); 
         rightButton.textContent = ">";
         buttons.append(rightButton);
